@@ -1,0 +1,106 @@
+form 
+{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+  
+input[type="text"] 
+{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+  
+input.ng-valid 
+{
+   border-color: green; 
+}
+  
+input.ng-invalid.ng-touched 
+{
+    border-color: red; 
+}
+  
+button[type="submit"] 
+{
+    width: 20%;
+    padding: 10px;
+    margin: 5px ;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+h5 
+{
+    color: red;
+    margin: 0;
+    font-size: 14px;
+}
+  
+h6 
+{
+    color: rgba(165, 42, 42, 0.951);
+    margin: 0;
+    font-size: 12px;
+}
+  
+
+table 
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+  
+th,td 
+{
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+}
+  
+th 
+{
+    background-color: whitesmoke;
+}
+
+td
+{
+    position: relative;
+}
+  
+
+td button 
+{
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+td button:hover 
+{
+    background-color: rgba(255, 0, 0, 0.577);
+
+}
+  

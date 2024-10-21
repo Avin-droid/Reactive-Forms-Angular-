@@ -1,0 +1,54 @@
+<form [formGroup]="frmemp" (ngSubmit)="archive()" novalidate-="">
+    
+Employee-Id:<input type="text" name="emp_id" [(ngModel)]="empObj.emp_id" formControlName="emp_id"><br>
+<h5 *ngIf="frmemp.controls.emp_id.touched && frmemp.controls.emp_id.invalid">Employee Id should contain only Numerical Value</h5><br>
+<h6 *ngIf="frmemp.controls.emp_id.touched && frmemp.controls.emp_id.value <=0">Employee Id cannot be 0 or Negative</h6><br>
+      
+Employee-Name:<input type="text" name="emp_name" [(ngModel)]="empObj.emp_name" formControlName="emp_name"><br>
+<h5 *ngIf="frmemp.controls.emp_name.touched && frmemp.controls.emp_name.invalid">Employee Name Should contain only Alphabets</h5><br><br>
+     
+Employee-Address:<input type="text" name="address" [(ngModel)]="empObj.address" formControlName="address"><br>
+<h5 *ngIf="frmemp.controls.address.touched && frmemp.controls.address.invalid">Employee Address should contain only AlphaNumeric Characters</h5><br><br>
+  
+Employee-Department:<input type="text" name="dept" [(ngModel)]="empObj.dept" formControlName="dept"><br>
+<h5 *ngIf="frmemp.controls.dept.touched && frmemp.controls.dept.invalid">Employee Department should contain only Alphabets</h5><br><br>
+  
+Employee-Salary:<input type="text" name="salary" [(ngModel)]="empObj.salary" formControlName="salary"><br>
+<h5 *ngIf="frmemp.controls.salary.touched && frmemp.controls.salary.invalid">Employee Salary should contain only Numeric Value</h5><br>
+<h6 *ngIf="frmemp.controls.salary.touched && frmemp.controls.salary.value <=0">Salary Cannot be Neagtive</h6><br>
+  
+Employee-DOB:<input type="date" name="birth_date" [(ngModel)]="empObj.birth_date" formControlName="birth_date"><br>
+<h5 *ngIf="frmemp.controls.birth_date.touched && frmemp.controls.birth_date.invalid">Employee Date of Birth should match required pattern</h5><br><br>
+  
+Employee-Joining_Date:<input type="date" name="join_date" [(ngModel)]="empObj.join_date" formControlName="join_date"><br>
+<h5 *ngIf="frmemp.controls.join_date.touched && frmemp.controls.join_date.invalid">Employee Joining Date should match required pattern</h5><br><br>
+  
+<button type="submit" name="ADD">SUBMIT</button>
+</form>
+<br>
+<br>
+  
+  <table>
+    <tr>
+      <th>Employee-Id</th>
+      <th>Employee-Name</th>
+      <th>Employee-Address</th>
+      <th>Employee-Department</th>
+      <th>Employee-Salary</th>
+      <th>Employee-DOB</th>
+      <th>Employee-Joining_Date</th>
+      <th>Delete Record</th>
+    </tr>
+  
+    <tr *ngFor="let em of empArr; let i = index">
+      <td>{{em.emp_id}}</td>
+      <td>{{em.emp_name}}</td>
+      <td>{{em.address}}</td>
+      <td>{{em.dept}}</td>
+      <td>{{em.salary}}</td>
+      <td>{{em.birth_date}}</td>
+      <td>{{em.join_date}}</td>
+      <td><button (click)="clear(i)">Delete</button></td>
+    </tr>
+  </table>
+  
